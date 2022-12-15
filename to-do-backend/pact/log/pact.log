@@ -1,0 +1,11 @@
+# Logfile created on 2022-02-27 12:18:03 +0300 by logger.rb/47272
+I, [2022-02-27T16:30:47.551017 #13744]  INFO -- : Running example 'Verifying a pact between UserInterface and TodoInterface Given get task list successfully a request not empty for task list with GET /api/v1/tasks returns a response which has status code 200'
+I, [2022-02-27T16:30:47.552158 #13744]  INFO -- : Sending GET request to path: "/api/v1/tasks" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"get task list successfully"}]}, see debug logs for body
+D, [2022-02-27T16:30:47.552158 #13744] DEBUG -- : body :
+I, [2022-02-27T16:30:49.965245 #13744]  INFO -- : Received response with status: 502, headers: {"Date"=>"Sun, 27 Feb 2022 13:30:49 GMT", "Content-Length"=>"0"}, see debug logs for body
+D, [2022-02-27T16:30:49.978725 #13744] DEBUG -- : body: 
+I, [2022-02-27T16:31:36.315699 #7548]  INFO -- : Running example 'Verifying a pact between UserInterface and TodoInterface Given get task list successfully a request not empty for task list with GET /api/v1/tasks returns a response which has status code 200'
+I, [2022-02-27T16:31:36.316525 #7548]  INFO -- : Sending GET request to path: "/api/v1/tasks" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"get task list successfully"}]}, see debug logs for body
+D, [2022-02-27T16:31:36.316525 #7548] DEBUG -- : body :
+I, [2022-02-27T16:31:36.390652 #7548]  INFO -- : Received response with status: 200, headers: {"Content-Length"=>"32", "Content-Type"=>"application/json; charset=UTF-8", "Date"=>"Sun, 27 Feb 2022 13:31:36 GMT"}, see debug logs for body
+D, [2022-02-27T16:31:36.390652 #7548] DEBUG -- : body: [{"id":1,"title":"buy a water"}]

@@ -1,0 +1,77 @@
+{
+  "consumer": {
+    "name": "UserInterface"
+  },
+  "provider": {
+    "name": "TodoInterface"
+  },
+  "interactions": [
+    {
+      "description": "a request not empty for task list",
+      "providerState": "get task list successfully",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/tasks"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "body": [
+          {
+            "id": 1,
+            "title": "drink water"
+          }
+        ],
+        "matchingRules": {
+          "$.body": {
+            "min": 1
+          },
+          "$.body[*].*": {
+            "match": "type"
+          },
+          "$.body[*].id": {
+            "match": "type"
+          },
+          "$.body[*].title": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "add not empty task",
+      "providerState": "post a task successfully",
+      "request": {
+        "method": "POST",
+        "path": "/api/v1/tasks",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "id": 1,
+          "title": "drink water"
+        },
+        "matchingRules": {
+          "$.body.id": {
+            "match": "type"
+          },
+          "$.body.title": {
+            "match": "type"
+          }
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
